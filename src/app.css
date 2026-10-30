@@ -1,0 +1,235 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f3f3f5;
+  background: #111216;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#app {
+  min-height: 100vh;
+  padding: 8px 16px 40px;
+}
+
+.contact-app {
+  width: min(100%, 494px);
+  margin: 0 auto;
+}
+
+.summary {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.summary h1 {
+  margin: 0;
+  color: #ff4b1f;
+  font-size: clamp(30px, 8vw, 42px);
+  font-weight: 500;
+  line-height: 0.88;
+}
+
+.count {
+  margin: 11px 0 6px;
+  color: #1687ff;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.counter-button {
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid #666;
+  border-radius: 0;
+  background: #333;
+  color: #f5f5f5;
+  font-size: 13px;
+}
+
+.counter-button:hover {
+  background: #414141;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 8px;
+  margin: 14px 0 30px;
+}
+
+.contact-form input {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+  padding: 5px 12px;
+  border: 1px solid #555;
+  border-radius: 0;
+  outline: none;
+  background: #242426;
+  color: #f3f3f5;
+  font-size: 13px;
+}
+
+.contact-form input:focus {
+  border-color: #1687ff;
+}
+
+.submit-button,
+.cancel-button {
+  min-width: 72px;
+  height: 30px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 0;
+  background: #f1f1f1;
+  color: #171717;
+  font-size: 13px;
+}
+
+.cancel-button {
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 11px 10px;
+  border: 1px solid #414147;
+}
+
+th {
+  background: #29292f;
+  color: #ff4b1f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+td {
+  background: #1e1e23;
+  font-size: 16px;
+}
+
+.table-message {
+  padding: 18px 10px;
+  color: #c4c4ca;
+  text-align: center;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.edit-button,
+.delete-button {
+  margin-right: 6px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.edit-button {
+  background: #414141;
+  color: #f3f3f5;
+}
+
+.delete-button {
+  margin-right: 0;
+  background: #dc3545;
+  color: #fff;
+}
+
+.notice {
+  margin: 10px 0;
+  padding: 9px 11px;
+  border: 1px solid;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.notice {
+  margin: 10px 0;
+  padding: 9px 11px;
+  border: 1px solid #5b5234;
+  background: #29251a;
+  color: #f0d998;
+}
+
+.error {
+  border-color: #78333b;
+  background: #311d21;
+  color: #ffb8bf;
+}
+
+.success {
+  border-color: #326749;
+  background: #1b2b21;
+  color: #a8e7bd;
+}
+
+code {
+  color: inherit;
+}
+
+@media (max-width: 520px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .submit-button {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+
+  th,
+  td {
+    padding: 9px 7px;
+  }
+
+  th {
+    font-size: 15px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+}
